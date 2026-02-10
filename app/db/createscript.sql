@@ -4,7 +4,7 @@
 -- ************************************************************
 -- Versie    Datum       Auteur            Omschrijving
 -- ******    ******      ******            ************
--- 01        10-02-2026  TristanR  Smartphones
+-- 01        10-02-2026  TristanR           Smartphones
 -- ************************************************************
 
 -- Verwijder database MVC_Basics_2509AB
@@ -22,7 +22,7 @@ USE `MVC_Basics_2509AB`;
 -- ************************************************************
 -- Versie    Datum       Auteur            Omschrijving
 -- ******    ******      ******            ************
--- 01        10-02-2026  TristanR  Tabel Smartphones
+-- 01        10-02-2026  TristanR          Tabel Smartphones
 -- ************************************************************
 -- Onderstaande velden toevoegen aan de tabel Smartphones
 -- Merk, Model, Prijs, Geheugen, Besturingssysteem,
@@ -53,7 +53,7 @@ CREATE TABLE Smartphones
 -- ************************************************************
 -- Versie    Datum       Auteur            Omschrijving
 -- ******    ******      ******            ************
--- 01        10-02-2026  TristanR  Vulling Smartphones
+-- 01        10-02-2026  TristanR           Vulling Smartphones
 -- ************************************************************
 
 INSERT INTO Smartphones
@@ -84,7 +84,7 @@ VALUES
 -- ********************************************************************************************
 -- Versie   Datum       Auteur           Omschrijving
 -- ****     ****        ******           *************
--- 01       10-02-2026  TristanR  Tabel Sneakers
+-- 01       10-02-2026  TristanR        Tabel Sneakers
 -- ********************************************************************************************
 -- Onderstaande velden toevoegen aan de tabel Sneakers
 -- Type (Hardloop, Basketbal, Casual), Prijs, Materiaal (Leer, Mesh, Synthetisch), Gewicht, Releasedatum
@@ -115,7 +115,7 @@ ENGINE=InnoDB;
 -- ********************************************************************************************
 -- Versie   Datum       Auteur           Omschrijving
 -- ****     ****        ******           *************
--- 01       10-02-2026  TristanR  Vulling Sneakers
+-- 01       10-02-2026  TristanR        Vulling Sneakers
 -- ********************************************************************************************
 
 INSERT INTO Sneakers
