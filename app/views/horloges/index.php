@@ -27,27 +27,25 @@
                         <th>Merk</th>
                         <th>Model</th>
                         <th>Prijs</th>
-                        <th>Geheugen</th>
-                        <th>Besturingssysteem</th>
-                        <th>Schermgrootte</th>
+                        <th>Materiaal</th>
+                        <th>Diameter (mm)</th>
+                        <th>Beweging</th>
                         <th>Releasedatum</th>
-                        <th>MegaPixels</th>
                         <th>Verwijder</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($data['result'] as $smartphone) : ?>
+                    <?php foreach ($data['result'] as $horloge) : ?>
                         <tr>
-                            <td><?= $smartphone->Merk; ?></td>
-                            <td><?= $smartphone->Model; ?></td>
-                            <td><?= $smartphone->Prijs; ?></td>
-                            <td><?= $smartphone->Geheugen; ?></td>
-                            <td><?= $smartphone->Besturingssysteem; ?></td>
-                            <td><?= $smartphone->Schermgrootte; ?></td>
-                            <td><?= $smartphone->Releasedatum; ?></td>
-                            <td><?= $smartphone->MegaPixels; ?></td>
+                            <td><?= $horloge->Merk; ?></td>
+                            <td><?= $horloge->Model; ?></td>
+                            <td><?= $horloge->Prijs; ?></td>
+                            <td><?= $horloge->Materiaal; ?></td>
+                            <td><?= $horloge->Diameter; ?></td>
+                            <td><?= $horloge->Beweging; ?></td>
+                            <td><?= $horloge->Releasedatum; ?></td>
                             <td class="text-center">
-                                <a href="<?= URLROOT; ?>/SmartphoneController/delete/<?= $smartphone->Id; ?>"
+                                <a href="<?= URLROOT; ?>/HorlogesController/delete/<?= $horloge->Id; ?>"
                                     onclick="return confirm('Weet je zeker dat je dit record wilt verwijderen?');">
                                     <i class="bi bi-trash3-fill text-danger"></i>
                                 </a>

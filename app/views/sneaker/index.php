@@ -8,39 +8,57 @@
         </div>
     </div>
 
-    <div class="row mt-3 d-flex justify-content-center">
-    <div class="col-10">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Merk</th>
-                    <th>Model</th>
-                    <th>Type</th>
-                    <th>Prijs</th>
-                    <th>Materiaal</th>
-                    <th>Gewicht</th>
-                    <th>Releasedatum</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach($data['result'] as $sneakers) : ?>
-                    <tr>
-                        <td><?= $sneakers->Merk; ?></td>
-                        <td><?= $sneakers->Model; ?></td>
-                        <td><?= $sneakers->Type; ?></td>
-                        <td><?= $sneakers->Prijs; ?></td>
-                        <td><?= $sneakers->Materiaal; ?></td>
-                        <td><?= $sneakers->Gewicht; ?></td>
-                        <td><?= $sneakers->Releasedatum; ?></td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-        <a href="<?= URLROOT; ?>/homepages/index">
-            <i class="bi bi-arrow-left"></i>
-        </a>
+
+    <!-- Terugkoppeling naar de gebruiker -->
+    <div class="row mt-3 d-<?= $data['display']; ?> justify-content-center">
+        <div class="col-10 text-begin text-primary">
+            <div class="alert alert-success" role="alert">
+                <?= $data['message']; ?>
+            </div>
+        </div>
     </div>
-</div>
+
+
+    <div class="row mt-3 d-flex justify-content-center">
+        <div class="col-10">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Merk</th>
+                        <th>Model</th>
+                        <th>Type</th>
+                        <th>Prijs</th>
+                        <th>Materiaal</th>
+                        <th>Gewicht</th>
+                        <th>Releasedatum</th>
+                        <th>Verwijder</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($data['result'] as $sneaker) : ?>
+                        <tr>
+                            <td><?= $sneaker->Merk; ?></td>
+                            <td><?= $sneaker->Model; ?></td>
+                            <td><?= $sneaker->Type; ?></td>
+                            <td><?= $sneaker->Prijs; ?></td>
+                            <td><?= $sneaker->Materiaal; ?></td>
+                            <td><?= $sneaker->Gewicht; ?></td>
+                            <td><?= $sneaker->Releasedatum; ?></td>
+                            <td class="text-center">
+                                <a href="<?= URLROOT; ?>/SneakerController/delete/<?= $sneaker->Id; ?>"
+                                    onclick="return confirm('Weet je zeker dat je dit record wilt verwijderen?');">
+                                    <i class="bi bi-trash3-fill text-danger"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <a href="<?= URLROOT; ?>/homepages/index">
+                <i class="bi bi-arrow-left"></i>
+            </a>
+        </div>
+    </div>
 
 </div>
 
